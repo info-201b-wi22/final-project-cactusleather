@@ -5,4 +5,4 @@ source("server.R")
 shinyApp(ui = ui, server = server)
 
 library(rsconnect)
-rsconnect::deployApp('C:/Users/owenp/Documents/Info201code/a4-climate-change-oprony/')
+rsconnect::deployApp('deploy file')

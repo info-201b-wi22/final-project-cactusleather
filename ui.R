@@ -2,11 +2,11 @@ library(ggplot2)
 library(plotly)
 library(bslib)
 
-climate_data <- read.csv("https://github.com/owid/co2-data/")
+climate_data <- read.csv("the data")
 
 intro_tab <- tabPanel(
-  "Introduction",
-  fluidPage(theme = bs_theme(bootswatch = "cerulean"),
+  "Intro",
+  fluidPage(theme = bs_theme(bootswatch = "theme"),
             p("Hi. This is an App")
   )
 )
@@ -15,14 +15,14 @@ intro_tab <- tabPanel(
 plot_sidebar <- sidebarPanel(
   selectInput(
     inputId = "user_category",
-    label = "Select Country",
+    label = "label",
     choices = climate_data$country,
-    selected = "United States",
+    selected = "default",
     multiple = TRUE)
 )
 
 plot_main <- mainPanel(
-  plotlyOutput(outputId = "climatePlot")
+  plotlyOutput(outputId = "plot")
 )
 
 plot_tab <- tabPanel(
@@ -35,7 +35,7 @@ plot_tab <- tabPanel(
 
 
 ui <- navbarPage(
-  "Climate Change",
+  "title",
   intro_tab,
   plot_tab
 )
