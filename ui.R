@@ -138,7 +138,7 @@ chart_tab1 <- tabPanel(
 )
 
 chart_tab2 <- tabPanel(
-  "Chart 2: Other",
+  "Chart 2: Retweets",
   sidebarLayout(
     plot_2_sidebar,
     plot_2_main
@@ -148,7 +148,7 @@ chart_tab2 <- tabPanel(
 )
 
 chart_tab3 <- tabPanel(
-  "Chart 3: Other",
+  "Chart 3: Location",
   sidebarLayout(
     plot_3_sidebar,
     plot_3_main
