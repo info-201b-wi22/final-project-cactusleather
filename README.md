@@ -1,9 +1,9 @@
 # Birds Aren't Real??
 ## INFO 201 "Foundational Skills for Data Science" — Winter 2022
 
-Authors: Blake Sketchley, Alex Seo, Kerry Malone, Owen Pronovost
+### Authors: Blake Sketchley, Alex Seo, Kerry Malone, Owen Pronovost
 
-https://y8aqs2-owen0eric-pronovost.shinyapps.io/final-project-cactusleather/
+Link: https://y8aqs2-owen0eric-pronovost.shinyapps.io/final-project-cactusleather/ 
 
 # Introduction
 
