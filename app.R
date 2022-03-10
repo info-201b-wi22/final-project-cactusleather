@@ -4,5 +4,3 @@ source("server.R")
 
 shinyApp(ui = ui, server = server)
 
-library(rsconnect)
-rsconnect::deployApp('deploy file')

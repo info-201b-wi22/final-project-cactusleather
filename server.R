@@ -2,7 +2,7 @@ library(ggplot2)
 library(plotly)
 library(dplyr)
 
-data <- read.csv("data goes here")
+# data <- read.csv("data goes here")
 
 server <- function(input, output) {
   
