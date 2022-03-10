@@ -5,8 +5,8 @@ library(bslib)
 intro_tab <- tabPanel(
   "Introduction",
   fluidPage(includeCSS("style.css"), theme = bs_theme(bootswatch = "lumen"),
-  h3("Here's the Context:"),
-  p("A significant number of members of Generation Z actively propagate 
+  tags$h3("Here's the Context:"),
+  tags$p("A significant number of members of Generation Z actively propagate 
     (as a joke or seriously) the myth that birds doesn't exist anymore, 
     because they were gradually replaced by the government with drones. 
     These drones perform, in this conspiracy theory, surveillance of 
@@ -17,9 +17,9 @@ intro_tab <- tabPanel(
     safety, and security at times. We aim to analyze data collected from 
     Twitter that discusses the well-known parody conspiracy theory - the 
     Birds Aren't Real movement."),
-  img(src = "https://religion.ua.edu/blog/wp-content/uploads/sites/2/2022/02/billboard-BAR.jpeg"),
-  h3("How this Relates to Bots:"),
-  p("Twitter has suffered from unwelcome bot accounts and activity since 
+  tags$img(src = "https://religion.ua.edu/blog/wp-content/uploads/sites/2/2022/02/billboard-BAR.jpeg"),
+  tags$h3("How This Relates to Bots:"),
+  tags$p("Twitter has suffered from unwelcome bot accounts and activity since 
     its inception. To the untrained eye, they may appear as reliable 
     accounts owned and ran by an actual human. The effects these bots 
     have range from funny when easily noticed to outright dangerous, 
@@ -32,7 +32,7 @@ intro_tab <- tabPanel(
     understated; as such, researching the frequency of bot posts on various 
     \"hot topics\" is critical to ensuring that the average post about those 
     topics is accurate and reliable."),
-  p("On a significantly more light-hearted topic than COVID-19, the \"Birds 
+  tags$p("On a significantly more light-hearted topic than COVID-19, the \"Birds 
   Aren't Real\" conspiracy theory claims that the U.S. government has gradually 
   replaced birds with drone mimics, which are used by the NSA (or another 
   government agency, depending on the theorist) to conduct surveillance on U.S. 
@@ -116,7 +116,11 @@ chart_tab3 <- tabPanel(
 
 conclusion_tab <- tabPanel(
   "Conclusion",
-  fluidPage()
+  fluidPage(),
+  tags$h3("In Conclusion:"),
+  tags$p("[some text]"),
+  tags$h3("Takeaways:"),
+  tags$p("[some text]"),
 )
 
 ui <- navbarPage(
