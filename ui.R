@@ -18,6 +18,7 @@ intro_tab <- tabPanel(
     Twitter that discusses the well-known parody conspiracy theory - the 
     Birds Aren't Real movement."),
   img(src = "https://religion.ua.edu/blog/wp-content/uploads/sites/2/2022/02/billboard-BAR.jpeg"),
+  h3("How this Relates to Bots:"),
   p("Twitter has suffered from unwelcome bot accounts and activity since 
     its inception. To the untrained eye, they may appear as reliable 
     accounts owned and ran by an actual human. The effects these bots 
@@ -44,24 +45,50 @@ intro_tab <- tabPanel(
   )
 )
 
-plot_sidebar <- sidebarPanel(
+plot_1_sidebar <- sidebarPanel(
   selectInput(
-    inputId = "user_category",
-    label = 'label',
-    choices = c("choices", "choices"),
+    inputId = "user_category_1",
+    label = "Source:",
+    choices = c("Twitter for iPhone", "Twitter Web App", "Twitter for Android", "Twitter for iPad", "artspark.io", "Buffer", "TweetDeck", "Hootsuite Inc."),
+    selected = "Twitter for iPhone",
+    multiple = TRUE)
+)
+
+plot_1_main <- mainPanel(
+  plotlyOutput(outputId = "plot_1")
+)
+
+plot_2_sidebar <- sidebarPanel(
+  selectInput(
+    inputId = "user_category_2",
+    label = "Source:",
+    choices = c("choices"),
     selected = "choices",
     multiple = TRUE)
 )
 
-plot_main <- mainPanel(
-  plotlyOutput(outputId = "")
+plot_2_main <- mainPanel(
+  plotlyOutput(outputId = "plot_2")
+)
+
+plot_3_sidebar <- sidebarPanel(
+  selectInput(
+    inputId = "user_category_3",
+    label = "Source:",
+    choices = c("choices"),
+    selected = "choices",
+    multiple = TRUE)
+)
+
+plot_3_main <- mainPanel(
+  plotlyOutput(outputId = "plot_3")
 )
 
 chart_tab1 <- tabPanel(
-  "Chart 1",
+  "Chart 1: By Date",
   sidebarLayout(
-    plot_sidebar,
-    plot_main
+    plot_1_sidebar,
+    plot_1_main
   ),
   fluidPage(),
 
@@ -70,8 +97,8 @@ chart_tab1 <- tabPanel(
 chart_tab2 <- tabPanel(
   "Chart 2",
   sidebarLayout(
-    plot_sidebar,
-    plot_main
+    plot_2_sidebar,
+    plot_2_main
   ),
   fluidPage(),
 
@@ -80,8 +107,8 @@ chart_tab2 <- tabPanel(
 chart_tab3 <- tabPanel(
   "Chart 3",
   sidebarLayout(
-    plot_sidebar,
-    plot_main
+    plot_3_sidebar,
+    plot_3_main
   ),
   fluidPage(),
 
