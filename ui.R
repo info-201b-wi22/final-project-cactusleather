@@ -42,6 +42,32 @@ intro_tab <- tabPanel(
   disinformation-spreading bots on Twitter as a whole. Additional points of 
   research include any potential location trends and date trends - that is, when 
   the conspiracy theory had a stronger/weaker presence online."),
+  tags$h3("Ethical Concerns, and Limitations of the Data:"),
+  tags$p("The Birds Aren't Real parody conspiracy theory highlights the 
+         prevalence of Twitter bot misinformation in a world where data is 
+         abundant, but not regulated for accuracy. Studying this dataset may 
+         give further clarity as to why unsubstantiated theories pervade our 
+         mainstream media, its misinformation directly causing violence, 
+         political polarization, and brainwashing. Occurrences of misinformation 
+         from Twitter bot activity reflect the need to continuously monitor the 
+         spread of false, unreliable misinformation. Data from the Birds Aren't 
+         Real conspiracy theory is crucial to understand how Twitter bot 
+         activity contributes directly to the dissemination of ungrounded 
+         conspiracy theories and associated misinformation."),
+  tags$p("The main ethical concern was that we were required to make an account 
+         to download this data, rather than it being completely free and open to 
+         use. That's a possible concern as it should be available to anyone, 
+         even if they don't have an email. Some limitations to this data are the 
+         fact that, due to its artificial and satirical nature, the intent 
+         behind making a bot dedicated to Birds Aren't Real is likely to deviate 
+         from the 'traditional' motivation for making bots that spread untested 
+         information unchecked. This may or may not affect the amount of bot 
+         activities regarding Birds Aren't Real. It is true that Birds Aren't 
+         Real reflects many aspects of actual conspiracy theories and their 
+         expansion. However, there is little room for it to be considered 
+         political, while a lot of conspiracy theories are prone to being 
+         politically interpreted or based on politics. Such cases may or may not 
+         display a different bot situation compared to Birds Aren't Real."),
   )
 )
 
@@ -49,7 +75,9 @@ plot_1_sidebar <- sidebarPanel(
   selectInput(
     inputId = "user_category_1",
     label = "Source:",
-    choices = c("Twitter for iPhone", "Twitter Web App", "Twitter for Android", "Twitter for iPad", "artspark.io", "Buffer", "TweetDeck", "Hootsuite Inc."),
+    choices = c("Twitter for iPhone", "Twitter Web App", "Twitter for Android", 
+                "Twitter for iPad", "artspark.io", "Buffer", "TweetDeck", 
+                "Hootsuite Inc."),
     selected = "Twitter for iPhone",
     multiple = TRUE)
 )
@@ -124,7 +152,7 @@ conclusion_tab <- tabPanel(
 )
 
 ui <- navbarPage(
-  "BIRDS.",
+  "Birds Aren't Real??",
   intro_tab,
   chart_tab1,
   chart_tab2,

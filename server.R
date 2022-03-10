@@ -12,7 +12,7 @@ server <- function(input, output) {
     # Note: problem here with "tweets = sum(n())", it adds up all values and combines them into one single value used for the graph. Unsure how to fix this just yet.
     plot_1 <- ggplot(data = data_1) +
       geom_point(aes(x = date, y = tweets, color = source)) + 
-      labs(title = "'Birds Aren't Real'-Related Tweets by Date", x = "Date", y = "Tweets", color = "Source") + 
+      labs(title = "Related Tweets by Date", x = "Date", y = "Tweets", color = "Source") + 
       scale_x_date(breaks = as.Date(c("2021-12-09", "2021-12-16", "2021-12-23", "2021-12-30", "2022-01-06", "2022-01-13", "2022-01-20"))) + 
       theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
     plotly_1 <- ggplotly(plot_1) 
