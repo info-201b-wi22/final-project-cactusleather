@@ -189,7 +189,7 @@ conclusion_tab <- tabPanel(
          of tweets received the minimum, 2 retweets. This indicates that the 
          tweets are receiving engagement from a large audience, meaning that the 
          tweets are not reaching a large number of users."),
-  tags$p("The third chart, which displays the top twenty self-proclaimed 
+  tags$p("The third chart, which displays the top twenty-five self-proclaimed 
          locations of users that tweeted about the Birds Aren't Real movement, 
          demonstrates how there is a somewhat even distribution of tweet hot 
          spot locations throughout the United States, particularly in urban 

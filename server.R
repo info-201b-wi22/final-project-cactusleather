@@ -34,10 +34,10 @@ server <- function(input, output) {
   output$plot_3 <- renderPlotly({
     data_3 <- data %>% filter(source %in% input$user_category_3)
     data_3 <- data_3 %>% distinct(user_name, .keep_all = TRUE) %>% mutate(user_location = str_trim(user_location)) %>% group_by(user_location, source) %>% summarize(count = sum(n())) %>% arrange(desc(count))
-    data_3 <- data_3[c(2:21), ]
+    data_3 <- data_3[c(2:26), ] %>% filter(user_location != "")
     plot_3 <- ggplot(data = data_3) +
       geom_col(aes(x = user_location, y = count, color = source)) + 
-      labs(title = "'Birds Aren't Real' Movement Hotspots", x = "Location", y = "Count", color = "Source") + 
+      labs(title = "'Birds Aren't Real' Movement Hotspots", x = "Location (self-reported)", y = "Count", color = "Source") + 
       theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
     plotly_3 <- ggplotly(plot_3)
     
