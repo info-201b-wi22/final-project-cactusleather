@@ -159,12 +159,17 @@ chart_tab3 <- tabPanel(
 
 conclusion_tab <- tabPanel(
   "Conclusion",
-  fluidPage(),
+  fluidPage(includeCSS("style.css"), theme = bs_theme(bootswatch = "lumen"),
   tags$h3("In Conclusion:"),
-  tags$p("[some text]"),
+  tags$p("The Birds Aren’t Real parody conspiracy theory highlights the prevalence of Twitter bot misinformation in a world where data is abundant, but not regulated for accuracy. Our Twitter data analysis demonstrates how Twitter may act as an echo chamber in terms of spreading conspiracy theories or circulating disinformation. We have also learned that there are instances where individual or bot activities almost never gain traction, however, the sheer number of tweets and their exposure is influential to Twitter users."),
   tags$h3("Takeaways:"),
-  tags$p("[some text]"),
+  tags$p("Our first chart, which displays the popularity of the Birds Aren't Real movement on Twitter over the last two months, shows two distinct spikes in Birds Aren’t Real-Related Tweets. Rather than this chart showing a consistent distribution of Birds Aren’t Real-Related Tweets, it shows one spike between December 10th and the 27th, 2021 and a second between January 5th and the 26th, 2022. Between December 27th and January 5th, there were no Birds Aren’t Real-Related tweets counted. This chart demonstrates how the Birds Aren’t Real discourse is spread rapidly on Twitter within a matter of weeks and disperse even quicker. In this way, Twitter mimics an echo chamber system, sustaining the spread of disinformation within a concentrated timeframe."),
+  tags$p("Our second chart, which displays the outreach of the Birds Aren't Real movement on Twitter by showing how many posts have more than one retweet, shows how few of the posts involving the movement went viral on Twitter. According to this chart, the majority of Birds Aren’t Real-Related tweets received less than 10 retweets, and the greatest number of tweets received the minimum, 2 retweets. This indicates that the tweets are receiving engagement from a large audience, meaning that the tweets are not reaching a large number of users."),
+  tags$p("The third chart, which displays the top twenty self-proclaimed locations of users that tweeted about the Birds Aren't Real movement, demonstrates how there is a somewhat even distribution of tweet hot spot locations throughout the United States, particularly in urban areas with large populations like Chicago, New York, Los Angeles, and Atlanta. This insight suggests that discourse regarding this movement is not limited geographically but disseminates through limited digital spaces instead."),
+  tags$p("Although we found that these tweets are not retweeted heavily or limited to one geographic location, our first chart’s findings demonstrate the nature in which controversial tweets related to Birds Not Real can become disseminated within a matter of days. This suggests that Twitter may be providing an environment where beliefs are amplified through reinforced, repetitive discourse isolated from opposing opinion. The implications of these findings are grave considering other unsubstantiated conspiracy theories that pervade our mainstream media, its misinformation potentially leading to violence, political polarization, and brainwashing. These occurrences of misinformation from Twitter bot activity reflect the need to continuously monitor the spread of false, unreliable misinformation."),
+  )
 )
+
 
 ui <- navbarPage(
   "Birds Aren't Real??",
