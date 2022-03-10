@@ -2,11 +2,9 @@ library(ggplot2)
 library(plotly)
 library(bslib)
 
-# climate_data <- read.csv("")
-
 intro_tab <- tabPanel(
   "Introduction",
-  fluidPage(theme = bs_theme(bootswatch = "lumen"),
+  fluidPage(includeCSS("style.css"), theme = bs_theme(bootswatch = "lumen"),
   h3("Here's the Context:"),
   p("A significant number of members of Generation Z actively propagate 
     (as a joke or seriously) the myth that birds doesn't exist anymore, 
