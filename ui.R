@@ -78,7 +78,7 @@ intro_tab <- tabPanel(
          expansion. However, there is little room for it to be considered 
          political, while a lot of conspiracy theories are prone to being 
          politically interpreted or based on politics. Such cases may or may not 
-         display a different bot situation compared to Birds Aren't Real."),
+         display a different bot situation compared to Birds Aren't Real.")
   )
 )
 
@@ -101,8 +101,10 @@ plot_2_sidebar <- sidebarPanel(
   selectInput(
     inputId = "user_category_2",
     label = "Source:",
-    choices = c("choices"),
-    selected = "choices",
+    choices = c("Twitter for iPhone", "Twitter Web App", "Twitter for Android", 
+                "Twitter for iPad", "artspark.io", "Buffer", "TweetDeck", 
+                "Hootsuite Inc."),
+    selected = "Twitter for iPhone",
     multiple = TRUE)
 )
 
@@ -114,8 +116,10 @@ plot_3_sidebar <- sidebarPanel(
   selectInput(
     inputId = "user_category_3",
     label = "Source:",
-    choices = c("choices"),
-    selected = "choices",
+    choices = c("Twitter for iPhone", "Twitter Web App", "Twitter for Android", 
+                "Twitter for iPad", "artspark.io", "Buffer", "TweetDeck", 
+                "Hootsuite Inc."),
+    selected = "Twitter for iPhone",
     multiple = TRUE)
 )
 
@@ -134,7 +138,7 @@ chart_tab1 <- tabPanel(
 )
 
 chart_tab2 <- tabPanel(
-  "Chart 2",
+  "Chart 2: Other",
   sidebarLayout(
     plot_2_sidebar,
     plot_2_main
@@ -144,7 +148,7 @@ chart_tab2 <- tabPanel(
 )
 
 chart_tab3 <- tabPanel(
-  "Chart 3",
+  "Chart 3: Other",
   sidebarLayout(
     plot_3_sidebar,
     plot_3_main
